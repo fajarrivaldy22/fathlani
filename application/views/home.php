@@ -35,7 +35,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="container">
 					<div class="row">
 						<div class="col">
-							<a  href='#' class='text-small text-center'><p style='text-align:center'>SIGN IN</p></a>
+							<a  href='<?php echo site_url().'/pages/signin'; ?>' class='text-small text-center'><p style='text-align:center'>SIGN IN</p></a>
 						</div>
 						<div class="col"><a href='#' class='text-small text-center'><p style='text-align:center'>HELP</p></a></div>
 					</div>
@@ -50,7 +50,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="container">
 					<div class="row">
 						<div class="col"><a href='#' class='text-small text-center'><p style='text-align:center'>WHISLIST</p></a></div>
-						<div class="col"><a  href='#' class=' text-center'><i class="fa fa-shopping-cart" style='font-size:26px'></i></a></div>
+						<div class="col"><a  href='#' class=' text-center'><i class="fa fa-shopping-cart" style='font-size:26px;text-align:center;'></i></a></div>
 					</div>
 				</div>
 			</div>

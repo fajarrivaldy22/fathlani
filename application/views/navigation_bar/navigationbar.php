@@ -5,16 +5,16 @@
   <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
     <li class="nav-item ">
-        <a class="nav-link" href="#">New Realese</a>
+        <a class="nav-link text-sm" style='font-size:12px;' href="#">New Realese</a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link" href="#">Product<span class="sr-only">(current)</span></a>
+        <a class="nav-link" style='font-size:12px;' href="#">Product<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link" href="#">Collection<span class="sr-only">(current)</span></a>
+        <a class="nav-link" style='font-size:12px;' href="#">Collection<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
+        <a class="nav-link" style='font-size:12px;' href="#">About</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">

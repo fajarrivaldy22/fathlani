@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Home_controller extends CI_Controller {
+class Signin extends CI_Controller {
 	public $title = "Fathlani.com | ";
 	/**
 	 * Index Page for this controller.
@@ -18,12 +18,11 @@ class Home_controller extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function index()
+    public function go()
 	{
-		$title = "Fathlani.com |";
 		$data = array(
-			'title'=>$this->title ,
+			'title'=>"Sign In",
 		);
-		$this->load->view('home',$data);
+		$this->load->view('signin',$data);
 	}
 }
