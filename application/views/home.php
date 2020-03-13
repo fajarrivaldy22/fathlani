@@ -31,28 +31,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			
 		</div>
 		<div class="row">
-			<div class="col-sm">
-				<div class="container">
-					<div class="row">
-						<div class="col">
-							<a  href='<?php echo site_url().'/pages/signin'; ?>' class='text-small text-center'><p style='text-align:center'>SIGN IN</p></a>
-						</div>
-						<div class="col"><a href='#' class='text-small text-center'><p style='text-align:center'>HELP</p></a></div>
-					</div>
-				</div>
+			<div class="col">
+					<a  href='<?php echo site_url().'/pages/signin'; ?>' class='text-small text-center'><p style='text-align:center'>SIGN IN</p>
+					</a>
 			</div>
+			<div class="col">
+					<a  href='#' class=' text-center'><i class="fa fa-shopping-cart" style='font-size:26px;text-align:center;'></i></a>
+			</div>
+			<div class="col">
+				<a href='#' class='text-small text-center'><p style='text-align:center'>WHISLIST</p></a>
+			</div >
+			<div class="col">
+					<a  href='<?php echo site_url().'/pages/signin'; ?>' class='text-small text-center'><p style='text-align:center'>SIGN IN</p>
+					</a>
+			</div>
+		</div>
+		<div class="row">
 			<div class="col-sm" >
-					<div class="icon-body">
-						<img style='width:230px;height:90px;margin-left:18%;' src="<?=base_url('assets/icon/fatlani.png');?>" alt="Italian Trulli">
-					</div>
-			</div>
-			<div class="col-sm">
-				<div class="container">
-					<div class="row">
-						<div class="col"><a href='#' class='text-small text-center'><p style='text-align:center'>WHISLIST</p></a></div>
-						<div class="col"><a  href='#' class=' text-center'><i class="fa fa-shopping-cart" style='font-size:26px;text-align:center;'></i></a></div>
-					</div>
-				</div>
+					<center>
+						<div class="icon-body">
+							<img style='width:230px;height:90px;' src="<?=base_url('assets/icon/fatlani.png');?>" alt="Italian Trulli">
+						</div>
+					</center>
 			</div>
 		</div>
 		<div class="row">
@@ -67,33 +67,33 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		</div>
 		<div class="row">
 			<div class="col">
-			<div class="carousell-custom" >
-				<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-				<div class="carousel-inner">
-					<div class="carousel-item active" style="width:100%;height:600px;">
-						<img class="d-block w-100" src="https://images.pexels.com/photos/1011509/pexels-photo-1011509.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="First slide">
-					</div>
-						<div class="carousel-item" style="width:110%;height:600px;">
-						<img class="d-block w-100" src="https://images.pexels.com/photos/1080377/pexels-photo-1080377.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Second slide">
-					</div>
-					<div class="carousel-item" style="width:100%;height:600px;">
-						<img class="d-block w-100" src="https://images.pexels.com/photos/1138173/pexels-photo-1138173.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Third slide">
-						<div class="carousel-caption d-none d-md-block">
-							<h5>Belanja</h5>
-							<p>sekarang</p>
+				<div class="carousell-custom" >
+					<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+					<div class="carousel-inner">
+						<div class="carousel-item active" style="width:100%;height:600px;">
+							<img class="d-block w-100" src="https://images.pexels.com/photos/1011509/pexels-photo-1011509.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="First slide">
+						</div>
+							<div class="carousel-item" style="width:110%;height:600px;">
+							<img class="d-block w-100" src="https://images.pexels.com/photos/1080377/pexels-photo-1080377.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Second slide">
+						</div>
+						<div class="carousel-item" style="width:100%;height:600px;">
+							<img class="d-block w-100" src="https://images.pexels.com/photos/1138173/pexels-photo-1138173.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Third slide">
+							<div class="carousel-caption d-none d-md-block">
+								<h5>Belanja</h5>
+								<p>sekarang</p>
+							</div>
 						</div>
 					</div>
+						<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
 				</div>
-					<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-						<span class="sr-only">Previous</span>
-					</a>
-					<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-						<span class="carousel-control-next-icon" aria-hidden="true"></span>
-						<span class="sr-only">Next</span>
-					</a>
-				</div>
-			</div>
 			</div>
 		</div>
 		<div class="row" style='margin-top:27px;'>

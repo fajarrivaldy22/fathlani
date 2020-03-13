@@ -25,6 +25,7 @@ class Pages extends CI_Controller {
 		);
 		$this->load->view('home',$data);
 		$this->load->view('component/footer');
+		$this->load->view('js/js');
 	}
 	public function signin()
 	{
