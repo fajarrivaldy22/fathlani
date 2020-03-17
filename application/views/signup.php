@@ -270,28 +270,62 @@
     </style>
 </head>
 <body>
-    <div class="wrapper fadeInDown">
-    <div id="formContent">
-        <!-- Tabs Titles -->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="wrapper fadeInDown">
+                    <div id="formContent">
+                        <!-- Tabs Titles -->
 
-        <!-- Icon -->
-        <div class="fadeIn first">
-            <h1>Sign in</h1>
+                        <!-- Icon -->
+                        <div class="fadeIn first">
+                            <h1>Sign up</h1>
+                        </div>
+
+                        <!-- Login Form -->
+                        <form>
+                            <input type="text" id="name" class="fadeIn second text-small" name="name" placeholder="Name">
+                            <input type="text" id="email" class="fadeIn second text-small" name="email" placeholder="Email">
+                            <input type="text" id="password" class="fadeIn third text-small" name="pwd" placeholder="password">
+                            <input type="text" id="repassword" class="fadeIn third text-small" name="rpwd" placeholder="retype password">
+                            <input type="submit" class="fadeIn fourth" value="Log In"></br>
+                            <p class='sign-up-text'>Haven't account ? <a class="underlineHover" href="<?php echo site_url().'/pages/signup'; ?>"> Sign up</a></p>
+                        </form>
+                        <div id="formFooter">
+                            <a class="underlineHover" href="#">Forgot Password?</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+
+                <div class="wrapper fadeInDown">
+                        <div id="formContent">
+                            <!-- Tabs Titles -->
+
+                            <!-- Icon -->
+                            <div class="fadeIn first">
+                                <h1>Sign up</h1>
+                            </div>
+
+                            <!-- Login Form -->
+                            <form>
+                                <input type="text" id="name" class="fadeIn second text-small" name="name" placeholder="Name">
+                                <input type="text" id="email" class="fadeIn second text-small" name="email" placeholder="Email">
+                                <input type="text" id="password" class="fadeIn third text-small" name="pwd" placeholder="password">
+                                <input type="text" id="repassword" class="fadeIn third text-small" name="rpwd" placeholder="retype password">
+                                <input type="submit" class="fadeIn fourth" value="Log In"></br>
+                                <p class='sign-up-text'>Haven't account ? <a class="underlineHover" href="<?php echo site_url().'/pages/signup'; ?>"> Sign up</a></p>
+                            </form>
+                            <div id="formFooter">
+                                <a class="underlineHover" href="#">Forgot Password?</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+            </div>
         </div>
-
-        <!-- Login Form -->
-        <form>
-        <input type="text" id="login" class="fadeIn second text-small" name="login" placeholder="Email">
-        <input type="text" id="password" class="fadeIn third text-small" name="login" placeholder="password">
-        <input type="submit" class="fadeIn fourth" value="Log In"></br>
-        <p class='sign-up-text'>Haven't account ? <a class="underlineHover" href="<?php echo site_url().'/pages/signup'; ?>"> Sign up</a></p>
-        </form>
-
-        <!-- Remind Passowrd -->
-        <div id="formFooter">
-        <a class="underlineHover" href="#">Forgot Password?</a>
-        </div>
-
-    </div>
     </div>
 </body>

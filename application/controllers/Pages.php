@@ -34,6 +34,17 @@ class Pages extends CI_Controller {
 		);
 		$this->load->view('css/assets',$data);
 		$this->load->view('signin');
-		
+		$this->load->view('component/footer');
+		$this->load->view('js/js');
+	}
+	public function signup()
+	{
+		$data = array(
+			'title'=>"Sign up",
+		);
+		$this->load->view('css/assets',$data);
+		$this->load->view('signup');
+		$this->load->view('component/footer');
+		$this->load->view('js/js');
 	}
 }
