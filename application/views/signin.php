@@ -1,5 +1,5 @@
 <head>
-    <style>
+<style>
         html {
         background-color: #56baed;
         }
@@ -41,26 +41,25 @@
         }
 
         #formContent {
-        -webkit-border-radius: 10px 10px 10px 10px;
-        border-radius: 10px 10px 10px 10px;
+        -webkit-border-radius: 0;
+        border-radius: 0;
         background: #fff;
         padding: 30px;
         width: 90%;
-        max-width: 450px;
+        max-width: 800px;
         position: relative;
         padding: 0px;
-        -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
-        box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+        border-top: 1px solid lightgrey;
+        border-bottom: 1px solid lightgrey;
         text-align: center;
         }
 
         #formFooter {
-        background-color: #f6f6f6;
-        border-top: 1px solid #dce8f1;
-        padding: 25px;
-        text-align: center;
-        -webkit-border-radius: 0 0 10px 10px;
-        border-radius: 0 0 10px 10px;
+            background-color: #fff;
+            border-top: 1px solid #dce8f1;
+            padding: 25px;
+            text-align: center;
+            
         }
 
 
@@ -80,7 +79,7 @@
 
         /* FORM TYPOGRAPHY*/
 
-        input[type=button], input[type=submit], input[type=reset]  {
+        input[type=button], input[type=submit], input[type=reset] {
             background-color: white;
             border: none;
             color: lightgrey;
@@ -111,15 +110,15 @@
             transform: scale(0.95);
         }
 
-        input[type=text] {
+        input[type=text], input[type=date]{
             background-color: #f6f6f6;
             border: none;
             color: #0d0d0d;
-            padding: 15px 32px;
+            padding: 15px 25px;
             text-align: left;
             text-decoration: none;
             display: inline-block;
-            font-size: 16px;
+            font-size: 12px;
             margin: 5px;
             width: 85%;
             border: 2px solid #f6f6f6;
@@ -128,8 +127,7 @@
             -ms-transition: all 0.5s ease-in-out;
             -o-transition: all 0.5s ease-in-out;
             transition: all 0.5s ease-in-out;
-            -webkit-border-radius: 5px 5px 5px 5px;
-            border-radius: 5px 5px 5px 5px;
+            
         }
 
         input[type=text]:focus {
@@ -260,7 +258,7 @@
 
             color:#cccccc;
         }
-        h1{
+        h3{
             color:darkgrey;
             padding:12px;
         }
@@ -270,13 +268,17 @@
     </style>
 </head>
 <body>
+    
     <div class="wrapper fadeInDown">
+    <center>
+        <img style="height:100px;width:250px;"src="<?=base_url('assets/icon/fatlani.png');?>"></img>
+    </center>
     <div id="formContent">
         <!-- Tabs Titles -->
 
         <!-- Icon -->
         <div class="fadeIn first">
-            <h1>Sign in</h1>
+            <h3>Sign in</h3>
         </div>
 
         <!-- Login Form -->

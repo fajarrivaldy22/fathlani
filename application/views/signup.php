@@ -41,26 +41,31 @@
         }
 
         #formContent {
-        -webkit-border-radius: 10px 10px 10px 10px;
-        border-radius: 10px 10px 10px 10px;
+        -webkit-border-radius: 0;
+        border-radius: 0;
         background: #fff;
         padding: 30px;
         width: 90%;
-        max-width: 450px;
+        max-width: 800px;
         position: relative;
         padding: 0px;
-        -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
-        box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+        border-top: 1px solid lightgrey;
+        border-bottom: 1px solid lightgrey;
         text-align: center;
         }
 
         #formFooter {
-        background-color: #f6f6f6;
-        border-top: 1px solid #dce8f1;
-        padding: 25px;
-        text-align: center;
-        -webkit-border-radius: 0 0 10px 10px;
-        border-radius: 0 0 10px 10px;
+            background-color: #fff;
+            border-top: 1px solid #dce8f1;
+            padding: 25px;
+            text-align: center;
+        }
+        #formHeader {
+            background-color: #fff;
+            border-bottom: 1px solid #dce8f1;
+            padding: 3px;
+            text-align: center;
+            margin-bottom:14px;
         }
 
 
@@ -80,7 +85,7 @@
 
         /* FORM TYPOGRAPHY*/
 
-        input[type=button], input[type=submit], input[type=reset]  {
+        input[type=button], input[type=submit], input[type=reset] {
             background-color: white;
             border: none;
             color: lightgrey;
@@ -111,15 +116,15 @@
             transform: scale(0.95);
         }
 
-        input[type=text] {
+        input[type=text], input[type=date]{
             background-color: #f6f6f6;
             border: none;
             color: #0d0d0d;
-            padding: 15px 32px;
+            padding: 15px 25px;
             text-align: left;
             text-decoration: none;
             display: inline-block;
-            font-size: 16px;
+            font-size: 12px;
             margin: 5px;
             width: 85%;
             border: 2px solid #f6f6f6;
@@ -128,8 +133,7 @@
             -ms-transition: all 0.5s ease-in-out;
             -o-transition: all 0.5s ease-in-out;
             transition: all 0.5s ease-in-out;
-            -webkit-border-radius: 5px 5px 5px 5px;
-            border-radius: 5px 5px 5px 5px;
+            
         }
 
         input[type=text]:focus {
@@ -260,7 +264,7 @@
 
             color:#cccccc;
         }
-        h1{
+        h3{
             color:darkgrey;
             padding:12px;
         }
@@ -270,62 +274,112 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <div class="wrapper fadeInDown">
-                    <div id="formContent">
-                        <!-- Tabs Titles -->
+    <div class="wrapper fadeInDown">
+        <center>
+            <img style="height:100px;width:250px;"src="<?=base_url('assets/icon/fatlani.png');?>"></img>
+        </center>
+        <div id="formContent">
+            <!-- Tabs Titles -->
 
-                        <!-- Icon -->
-                        <div class="fadeIn first">
-                            <h1>Sign up</h1>
-                        </div>
-
-                        <!-- Login Form -->
-                        <form>
-                            <input type="text" id="name" class="fadeIn second text-small" name="name" placeholder="Name">
-                            <input type="text" id="email" class="fadeIn second text-small" name="email" placeholder="Email">
-                            <input type="text" id="password" class="fadeIn third text-small" name="pwd" placeholder="password">
-                            <input type="text" id="repassword" class="fadeIn third text-small" name="rpwd" placeholder="retype password">
-                            <input type="submit" class="fadeIn fourth" value="Log In"></br>
-                            <p class='sign-up-text'>Haven't account ? <a class="underlineHover" href="<?php echo site_url().'/pages/signup'; ?>"> Sign up</a></p>
-                        </form>
-                        <div id="formFooter">
-                            <a class="underlineHover" href="#">Forgot Password?</a>
-                        </div>
-
-                    </div>
+            <!-- Icon -->
+            <div class="fadeIn first">
+                
+                <div id="formHeader">
+                    <h3>Register</h3>
                 </div>
             </div>
-            <div class="col">
 
-                <div class="wrapper fadeInDown">
-                        <div id="formContent">
-                            <!-- Tabs Titles -->
-
-                            <!-- Icon -->
-                            <div class="fadeIn first">
-                                <h1>Sign up</h1>
+            <!-- Login Form -->
+            <div class="container">
+                <form method="POST" action="">
+                <div class="row">
+                    <div class="col">
+                        
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="text" id="name" class="fadeIn second text-small" name="name" placeholder="Name">  
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="text" id="email" class="fadeIn second text-small" name="email" placeholder="Email">      
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="text" id="password" class="fadeIn third text-small" name="pwd" placeholder="password">           
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="text" id="repassword" class="fadeIn third text-small" name="rpwd" placeholder="retype password">    
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                                
+                                    </div>
+                                </div>
                             </div>
-
-                            <!-- Login Form -->
-                            <form>
-                                <input type="text" id="name" class="fadeIn second text-small" name="name" placeholder="Name">
-                                <input type="text" id="email" class="fadeIn second text-small" name="email" placeholder="Email">
-                                <input type="text" id="password" class="fadeIn third text-small" name="pwd" placeholder="password">
-                                <input type="text" id="repassword" class="fadeIn third text-small" name="rpwd" placeholder="retype password">
-                                <input type="submit" class="fadeIn fourth" value="Log In"></br>
-                                <p class='sign-up-text'>Haven't account ? <a class="underlineHover" href="<?php echo site_url().'/pages/signup'; ?>"> Sign up</a></p>
-                            </form>
-                            <div id="formFooter">
-                                <a class="underlineHover" href="#">Forgot Password?</a>
-                            </div>
-
-                        </div>
+                               
                     </div>
-
+                    <div class="col">
+                    <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="container">
+                                            <h5 style="color:darkgrey">Gender :</h5>
+                                            <div class="row"style="color:darkgrey">
+                                                <div class="col">
+                                                    <input type="radio" id="male" name="gender" value="male">
+                                                    <label for="male">Male</label><br>
+                                                </div>
+                                                <div class="col">
+                                                    <input type="radio" id="female" name="gender" value="female">
+                                                    <label for="female">Female</label><br>
+                                                </div>
+                                            </div>
+                                        </div>  
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="text" id="alamat" class="fadeIn second text-small" name="alamat" placeholder="Alamat">      
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="date" id="password" class="fadeIn third text-small" name="tl" placeholder="born">           
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="text" id="repassword" class="fadeIn third text-small" name="telp" placeholder="telp">    
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                                
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                        
+                    </div>
+                </div>
+                
+                <input type="submit" class="fadeIn fourth" value="Sign up"></br>
+                <p class='sign-up-text'>already have account ? <a class="underlineHover" href="<?php echo site_url().'/pages/signin'; ?>"> Sign in</a></p>
+                 </form>
             </div>
+
+            <!-- Remind Passowrd -->
+            <div id="formFooter">
+                <a class="underlineHover" href="#">Forgot Password?</a>
+            </div>
+
         </div>
     </div>
 </body>
