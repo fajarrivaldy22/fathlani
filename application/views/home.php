@@ -7,64 +7,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<?php
 		$this->load->view('css/assets.php');
 		$this->load->view('css/assets');
+		$this->load->view('navigation_bar/upper-info');
 	?>
-	<div class="upper-info">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<h6 style='text-align:center'>Instagram</h6>
-				</div>
-				<div class="col">
-					<h6 style='text-align:center'>WhatsApp</h6>
-				</div>
-				<div class="col">
-					<h6 style='text-align:center'>Phone</h6>
-				</div>
-			</div>
-			
-		</div>
-	</div>
+	
 <head>
 <body>
 	<div class="container">
 		<div class="row">
 			
 		</div>
-		<div class="row">
-			<div class="col">
-					<a  href='<?php echo site_url().'/pages/signin'; ?>' class='text-small text-center'><p style='text-align:center'>SIGN IN</p>
-					</a>
-			</div>
-			<div class="col">
-					<a  href='#' class=' text-center'><i class="fa fa-shopping-cart" style='font-size:26px;text-align:center;'></i></a>
-			</div>
-			<div class="col">
-				<a href='#' class='text-small text-center'><p style='text-align:center'>WHISLIST</p></a>
-			</div >
-			<div class="col">
-					<a  href='<?php echo site_url().'/pages/signin'; ?>' class='text-small text-center'><p style='text-align:center'>SIGN IN</p>
-					</a>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-sm" >
-					<center>
-						<div class="icon-body">
-							<img style='width:230px;height:90px;' src="<?=base_url('assets/icon/fatlani.png');?>" alt="Italian Trulli">
-						</div>
-					</center>
-			</div>
-		</div>
-		<div class="row">
-			
-				<div class="col">
-				<div class="container-navbar1">
-					<?php
-						$this->load->view('navigation_bar/navigationbar');
-					?>
-				</div>
-			</div>
-		</div>
+		<?php
+			$this->load->view('navigation_bar/navigationbar');
+		?>
 		<div class="row">
 			<div class="col">
 				<div class="carousell-custom" >

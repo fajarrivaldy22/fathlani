@@ -110,7 +110,7 @@
             transform: scale(0.95);
         }
 
-        input[type=text], input[type=date]{
+        input[type=text], input[type=date],input[type=email],input[type=password]{
             background-color: #f6f6f6;
             border: none;
             color: #0d0d0d;
@@ -130,7 +130,7 @@
             
         }
 
-        input[type=text]:focus {
+        input[type=text]:focus, input[type=date]:focus,input[type=email]:focus,input[type=password]:focus {
             background-color: #fff;
             border-bottom: 2px solid #5fbae9;
         }
@@ -282,9 +282,9 @@
         </div>
 
         <!-- Login Form -->
-        <form>
-        <input type="text" id="login" class="fadeIn second text-small" name="login" placeholder="Email">
-        <input type="text" id="password" class="fadeIn third text-small" name="login" placeholder="password">
+        <form method="POST" action="<?php echo site_url().'/pages/loginuser'; ?>">
+        <input type="email" id="login" class="fadeIn second text-small" name="email" placeholder="Email" required>
+        <input type="password" id="password" class="fadeIn third text-small" name="password" placeholder="password" required>
         <input type="submit" class="fadeIn fourth" value="Log In"></br>
         <p class='sign-up-text'>Haven't account ? <a class="underlineHover" href="<?php echo site_url().'/pages/signup'; ?>"> Sign up</a></p>
         </form>
