@@ -1,7 +1,7 @@
 <div class="upper-info">
 		<div class="container">
 			<div class="row">
-				<div class="col text-right-left">
+				<div class="col text-left">
 					<h6 >Instagram</h6>
 				</div>
 				<div class="col">
@@ -9,13 +9,13 @@
 				</div>
 				<div class="col text-right" style=''>
 					<div class="d-inline-block">
-                        <h6 style='text-align:center'>Follow us:</h6>
+                        <h6 style='text-align:center;font-size:12px'>Follow us:</h6>
                     </div>
                     <div class="d-inline-block">
-                        <i class="fa fa-facebook-f white-text "> </i>
+                        <i class="fa fa-facebook-f white-text mr-2 ml-1"> </i>
                     </div>
                     <div class="d-inline-block">
-                        <i class="fa fa-instagram white-text"></i>
+                        <i class="fa fa-instagram white-text mr-2"></i>
                     </div>
                     <div class="d-inline-block">
                         <i class="fa fa-whatsapp white-text"></i>

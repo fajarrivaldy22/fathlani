@@ -51,7 +51,17 @@ class Pages extends CI_Controller {
         );
 
 		$this->pagesmodels->loginuser($data);
-        redirect();
+		if(empty($this->session->userdata("user"))){
+			redirect("pages/signin");
+			// password salah atau email
+		}else{
+			if($this->session->userdata("user")->status=="0"){
+				redirect();
+			}else if($this->session->userdata("user")->status=="1"){
+				redirect("admin");
+			}
+		}
+        
 	}
 
 	public function logout(){

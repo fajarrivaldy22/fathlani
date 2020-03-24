@@ -1,25 +1,37 @@
 <div class="row">
-			<div class="col">
-      <?php 
-        if(!empty($this->session->userdata("user"))){ ?>
-          <p class='text-small text-center' style='text-align:center'>Welcome, <a href='#'><?php print_r($this->session->userdata("user")->first_name); ?></a></p>
-          
-        <?php }else{ ?>
-          <a  href='<?php echo site_url().'/pages/signin'; ?>' class='text-small text-center'><p style='text-align:center'>SIGN IN</p></a>
-        <?php }?>
+			<div class="col text-left">
+				<?php 
+					if(!empty($this->session->userdata("user"))){ ?>
+					<p class='text-small '>Welcome, <a href='#'><?php print_r($this->session->userdata("user")->first_name); ?></a></p>
+					
+					<?php }else{ ?>
+					
+					<?php }?>
 			</div>
+			
 			<div class="col">
-					<a  href='#' class=' text-center'><i class="fa fa-shopping-cart" style='font-size:26px;text-align:center;'></i></a>
-			</div>
-			<div class="col">
-				<a href='#' class='text-small text-center'><p style='text-align:center'>WHISLIST</p></a>
+				
 			</div >
-			<div class="col">
-				<?php	if(empty($this->session->userdata("user"))){ ?>
-          <a  href='<?php echo site_url().'/pages/signin'; ?>' class='text-small text-center'><p style='text-align:center'>SIGN IN</p></a>
-        <?php }else{ ?>
-          <a  href='<?php echo site_url().'/pages/logout'; ?>' class='text-small text-center'><p style='text-align:center'>LOGOUT</p></a>
-        <?php } ?>
+			<div class="col text-right">
+				
+					<?php	if(empty($this->session->userdata("user"))){ ?>
+						
+						<div class="d-inline-block">
+							<a  href='<?php echo site_url().'/pages/signin'; ?>' class='text-small text-center text-secondary'><i style='font-size:16px' class="fa fa-user"></i></a>
+						</div>
+					<?php }else{ ?>
+						<div class="d-inline-block ">
+							<a  href='#' class=' text-center mt-n1'><i class="fa fa-shopping-cart text-secondary mr-4" style='font-size:16px;text-align:center;padding-left:12px'></i></a>
+						</div>		
+						<div class="d-inline-block">
+							<a  href='#bell' class='text-small text-center'><i class="fa fa-bell text-secondary mr-4"  style='font-size:16px'></i></a>
+						</div>
+						<div class="d-inline-block">
+							<a  href='<?php echo site_url().'/pages/logout'; ?>' class='text-small text-center text-secondary '><i style="font-size:16px;" class="fa fa-sign-out"></i></a>	
+						</div>
+					<?php } ?>
+				
+				
 			</div>
 		</div>
 		<div class="row">
