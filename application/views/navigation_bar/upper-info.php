@@ -18,7 +18,13 @@
                         <i class="fa fa-instagram white-text mr-2"></i>
                     </div>
                     <div class="d-inline-block">
-                        <i class="fa fa-whatsapp white-text"></i>
+                        <i class="fa fa-whatsapp white-text mr-2"></i>
+					</div>
+					<div class="d-inline-block">
+                        <i class="fa fa-twitter white-text mr-2"></i>
+					</div>
+					<div class="d-inline-block">
+                        <i class="fa fa-youtube white-text"></i>
                     </div>
 				</div>
 			</div>

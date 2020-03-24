@@ -14,4 +14,14 @@ class Admin extends CI_Controller {
         $this->load->view('admin/adminDashboard');
         $this->load->view('js/js');
     }
+
+    public function logout(){
+		$this->session->sess_destroy();
+		redirect();
+    }
+    
+    public function dashboard(){
+        $title = "Dashboard";
+        $this->load->view("admin/referenceAdmin/component/dashboard",array("title"=>$title));
+    }
 }
