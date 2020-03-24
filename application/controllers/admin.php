@@ -11,7 +11,6 @@ class Admin extends CI_Controller {
             }
         }
         $this->load->view('css/assets');
-
         $this->load->view('admin/adminDashboard');
         $this->load->view('js/js');
     }
