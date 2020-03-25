@@ -8,26 +8,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-
+  <script src="jquery-3.4.1.min.js"></script>
 
   <!-- Custom fonts for this template-->
   <link href="<?= base_url('assets/css/all.min.css');?>" rel="stylesheet" type="text/css">
   <link href="<?= base_url('assets/vendor/fontawesome-free/css/all.min.css');?>" rel="stylesheet" type="text/css">
+  <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
+
 
   <!-- Custom styles for this template-->
   <link href="<?= base_url('assets/css/sb-admin-2.min.css');?>" rel="stylesheet">
   <script>
-    function loadComponent(target,component){
-      var xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-          document.getElementById(target).innerHTML = this.responseText;
-        }
-      };
-      xhttp.open("GET", component, true);
-      xhttp.send();
-    }
-    loadComponent("demo","<?php echo site_url().'/admin/dashboard';?>")
+    
+    
         
       
   </script>
@@ -44,11 +37,11 @@
     <ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion fixed-left" id="accordionSidebar" >
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+      <a id="dashboard-btn" class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
         <div class="sidebar-brand-icon rotate-n-15">
-          <i class="fa fa-laugh-wink"></i>
+          
         </div>
-        <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+        <div id="dashboard-btn" class="sidebar-brand-text mx-3">FATHLANI</div>
       </a>
 
       <!-- Divider -->
@@ -56,7 +49,7 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href="index.html">
+        <a id="dashboard-btn" class="nav-link" href="#dashboard">
           <i class="fa fa-fw fa-home""></i>
           <span>Dashboard</span></a>
       </li>
@@ -79,8 +72,8 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Order type:</h6>
-            <a class="collapse-item" href="">Reseller</a>
-            <a class="collapse-item" href="">Dropshiper</a>
+            <a id="reseller-btn" class="collapse-item" href="#reseller" on>Reseller</a>
+            <a id="dropshiper-btn" class="collapse-item" href="#dropshiper">Dropshiper</a>
           </div>
         </div>
       </li>
@@ -88,22 +81,22 @@
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-          <i class="fa fa-fw fa-wrench"></i>
+          <i class="fas fa-boxes"></i>
           <span>Product</span>
         </a>
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="utilities-color.php">Tambah Product</a>
-            <a class="collapse-item" href="utilities-border.html">Edit Product</a>
-            <a class="collapse-item" href="utilities-other.html">Lain - lain</a>
+            <a id="tambah-produk" class="collapse-item" href="#tambahproduk">Tambah Product</a>
+            <a id="edit-produk" class="collapse-item" href="#editproduk">Edit Product</a>
+            <a id="dll-produk" class="collapse-item" href="#dll">Lain - lain</a>
           </div>
         </div>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link">
-          <i class="fa fa-fw fa-wrench"></i>
-          <span>Customer</span>
+        <a id="customer-btn" class="nav-link" href="#customer">
+          <i class="fas fa-users"></i>
+          <span id="customer-btn" >Customer</span>
         </a>
         
       </li>
@@ -417,7 +410,59 @@
   <!-- Page level custom scripts -->
   <script src="<?= base_url('assets/js/demo/chart-area-demo.js');?>"></script>
   <script src="<?= base_url('assets/js/demo/chart-pie-demo.js');?>"></script>
+
+  <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+
+
+  <script>
+    $(document).ready(function(){
+      function loadComponent(target,component){
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            document.getElementById(target).innerHTML = this.responseText;
+          }
+        };
+        xhttp.open("GET", component, true);
+        xhttp.send();
+      }
+      loadComponent("demo","<?php echo site_url().'/admin/dashboard';?>");
+        
+      $("#customer-btn").click(function(){
+        loadComponent("demo","<?php echo site_url().'/admin/customer';?>");
+      });
+
+      $("#dashboard-btn").click(function(){
+        loadComponent("demo","<?php echo site_url().'/admin/dashboard';?>");
+      });
+
+      $("#tambah-produk").click(function(){
+        loadComponent("demo","<?php echo site_url().'/admin/tambahproduct';?>");
+      });
+
+      $("#edit-produk").click(function(){
+        loadComponent("demo","<?php echo site_url().'/admin/editproduct';?>");
+      });
+
+      $("#dll-produk").click(function(){
+        loadComponent("demo","<?php echo site_url().'/admin/dllproduct';?>");
+      });
+
+      $("#reseller-btn").click(function(){
+        loadComponent("demo","<?php echo site_url().'/admin/reseller';?>");
+      });
+
+      $("#dropshiper-btn").click(function(){
+        loadComponent("demo","<?php echo site_url().'/admin/dropshiper';?>");
+      });
+
+      $('#example').DataTable();
+    
+    });
   
+  </script>
+
 
 </body>
 
