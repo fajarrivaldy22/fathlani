@@ -1,1 +1,3 @@
-tambah product
+<script>
+    alert("halo");
+</script>

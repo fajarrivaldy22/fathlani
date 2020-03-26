@@ -9,15 +9,17 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <script src="jquery-3.4.1.min.js"></script>
-
+  <link rel="icon" href="<?=base_url('assets/icon/logo.png');?>">
   <!-- Custom fonts for this template-->
   <link href="<?= base_url('assets/css/all.min.css');?>" rel="stylesheet" type="text/css">
   <link href="<?= base_url('assets/vendor/fontawesome-free/css/all.min.css');?>" rel="stylesheet" type="text/css">
-  <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
 
+  
 
   <!-- Custom styles for this template-->
   <link href="<?= base_url('assets/css/sb-admin-2.min.css');?>" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="<?= base_url('assets/vendor/datatables/dataTables.bootstrap4.min.css');?>">
   <script>
     
     
@@ -37,7 +39,7 @@
     <ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion fixed-left" id="accordionSidebar" >
 
       <!-- Sidebar - Brand -->
-      <a id="dashboard-btn" class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
+      <a id="dashboard-btn" class="sidebar-brand d-flex align-items-center justify-content-center" href="<?php echo site_url().'/admin/dashboard';?>">
         <div class="sidebar-brand-icon rotate-n-15">
           
         </div>
@@ -48,8 +50,8 @@
       <hr class="sidebar-divider my-0">
 
       <!-- Nav Item - Dashboard -->
-      <li class="nav-item active">
-        <a id="dashboard-btn" class="nav-link" href="#dashboard">
+      <li id="dashboard" class="nav-item">
+        <a id="dashboard-btn" class="nav-link" href="<?php echo site_url().'/admin/dashboard';?>">
           <i class="fa fa-fw fa-home""></i>
           <span>Dashboard</span></a>
       </li>
@@ -72,8 +74,8 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Order type:</h6>
-            <a id="reseller-btn" class="collapse-item" href="#reseller" on>Reseller</a>
-            <a id="dropshiper-btn" class="collapse-item" href="#dropshiper">Dropshiper</a>
+            <a id="reseller-btn" class="collapse-item" href="<?php echo site_url().'/admin/reseller';?>" on>Reseller</a>
+            <a id="dropshiper-btn" class="collapse-item" href="<?php echo site_url().'/admin/dropshiper';?>">Dropshiper</a>
           </div>
         </div>
       </li>
@@ -86,17 +88,25 @@
         </a>
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a id="tambah-produk" class="collapse-item" href="#tambahproduk">Tambah Product</a>
-            <a id="edit-produk" class="collapse-item" href="#editproduk">Edit Product</a>
-            <a id="dll-produk" class="collapse-item" href="#dll">Lain - lain</a>
+            <a id="tambah-produk" class="collapse-item" href="<?php echo site_url().'/admin/tambahproduct';?>">Tambah Product</a>
+            <a id="edit-produk" class="collapse-item" href="<?php echo site_url().'/admin/editproduct';?>">Edit Product</a>
+            <a id="dll-produk" class="collapse-item" href="<?php echo site_url().'/admin/dllproduct';?>">Lain - lain</a>
           </div>
         </div>
       </li>
 
       <li class="nav-item">
-        <a id="customer-btn" class="nav-link" href="#customer">
+        <a id="customer-btn" class="nav-link" href="<?php echo site_url().'/admin/customer';?>">
           <i class="fas fa-users"></i>
           <span id="customer-btn" >Customer</span>
+        </a>
+        
+      </li>
+
+      <li class="nav-item">
+        <a id="customer-btn" class="nav-link" href="<?php echo site_url().'/admin/transaksi';?>">
+          <i class="fas fa-dollar-sign"></i>
+          <span id="customer-btn" >Transaction</span>
         </a>
         
       </li>
@@ -124,7 +134,7 @@
             <div class="collapse-divider"></div>
             <h6 class="collapse-header">Other Pages:</h6>
             <a class="collapse-item" href="404.html">404 Page</a>
-            <a class="collapse-item" href="blank.html">Blank Page</a>
+            <a class="collapse-item" href="<?php echo site_url().'/admin/blankpage';?>">Blank Page</a>
           </div>
         </div>
       </li>
@@ -348,6 +358,51 @@
 
         <!-- Begin Page Content -->
         <div id="demo" class="container-fluid">
+          <?php
+            if(empty($this->session->flashdata("conten-admin"))){
+              $title = "Dashboard";
+              $this->load->view("admin/referenceAdmin/component/dashboard",array("title"=>$title));
+            }else if($this->session->flashdata("conten-admin")=='dashboard'){
+
+              $title = "Dashboard";
+              $this->load->view("admin/referenceAdmin/component/dashboard",array("title"=>$title));
+
+            }else if($this->session->flashdata("conten-admin")=='customer'){
+
+              $title = "Customer";
+              $this->load->view("admin/referenceAdmin/component/customer",array("title"=>$title));
+
+            }else if($this->session->flashdata("conten-admin")=='dropshiper'){
+
+              $title = "dropshiper";
+              $this->load->view("admin/referenceAdmin/component/orders/dropshiper",array("title"=>$title));
+
+            }else if($this->session->flashdata("conten-admin")=='reseller'){
+              $title = "Reseller";
+              $this->load->view("admin/referenceAdmin/component/orders/reseller",array("title"=>$title));
+
+            }else if($this->session->flashdata("conten-admin")=='tambahproduk'){
+
+              $title = "Tambah Product";
+              $this->load->view("admin/referenceAdmin/component/product/tambahproduct",array("title"=>$title));
+            
+            }else if($this->session->flashdata("conten-admin")=='dll'){
+
+              $title = "Lain -Lain";
+              $this->load->view("admin/referenceAdmin/component/product/dll",array("title"=>$title));
+            
+            }else if($this->session->flashdata("conten-admin")=='editproduk'){
+
+              $title = "Edit Produk";
+              $this->load->view("admin/referenceAdmin/component/product/editproduct",array("title"=>$title));
+            
+            }else if($this->session->flashdata("conten-admin")=='transaksi'){
+
+              $title = "Transaksi";
+              $this->load->view("admin/referenceAdmin/component/transaksi",array("title"=>$title));
+            
+            }
+          ?>
         </div>
         <!-- /.container-fluid -->
 
@@ -396,7 +451,7 @@
  
   <!-- Bootstrap core JavaScript-->
   <script src="<?= base_url('assets/vendor/jquery/jquery.min.js');?>"></script>
-
+  <script src="<?= base_url('assets/vendor/bootstrap/js/bootstrap.bundle.min.js');?>"></script>
 
   <!-- Core plugin JavaScript-->
   <script src="<?= base_url('assets/vendor/jquery-easing/jquery.easing.min.js');?>"></script>
@@ -411,57 +466,13 @@
   <script src="<?= base_url('assets/js/demo/chart-area-demo.js');?>"></script>
   <script src="<?= base_url('assets/js/demo/chart-pie-demo.js');?>"></script>
 
-  <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
-  <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+  <!-- Data Table -->
+  <script src="<?= base_url('assets/vendor/datatables/jquery.dataTables.min.js');?>"></script>
+  <script src="<?= base_url('assets/vendor/datatables/dataTables.bootstrap4.min.js');?>"></script>    
+
+  <script src="<?= base_url('assets/js/demo/datatables-demo.js');?>"></script>    
 
 
-  <script>
-    $(document).ready(function(){
-      function loadComponent(target,component){
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            document.getElementById(target).innerHTML = this.responseText;
-          }
-        };
-        xhttp.open("GET", component, true);
-        xhttp.send();
-      }
-      loadComponent("demo","<?php echo site_url().'/admin/dashboard';?>");
-        
-      $("#customer-btn").click(function(){
-        loadComponent("demo","<?php echo site_url().'/admin/customer';?>");
-      });
-
-      $("#dashboard-btn").click(function(){
-        loadComponent("demo","<?php echo site_url().'/admin/dashboard';?>");
-      });
-
-      $("#tambah-produk").click(function(){
-        loadComponent("demo","<?php echo site_url().'/admin/tambahproduct';?>");
-      });
-
-      $("#edit-produk").click(function(){
-        loadComponent("demo","<?php echo site_url().'/admin/editproduct';?>");
-      });
-
-      $("#dll-produk").click(function(){
-        loadComponent("demo","<?php echo site_url().'/admin/dllproduct';?>");
-      });
-
-      $("#reseller-btn").click(function(){
-        loadComponent("demo","<?php echo site_url().'/admin/reseller';?>");
-      });
-
-      $("#dropshiper-btn").click(function(){
-        loadComponent("demo","<?php echo site_url().'/admin/dropshiper';?>");
-      });
-
-      $('#example').DataTable();
-    
-    });
-  
-  </script>
 
 
 </body>

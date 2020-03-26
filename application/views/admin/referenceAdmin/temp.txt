@@ -1,0 +1,49 @@
+/*$(document).ready(function(){
+      function loadComponent(target,component){
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            document.getElementById(target).innerHTML = this.responseText;
+          }
+        };
+        xhttp.open("GET", component, true);
+        xhttp.overrideMimeType('application/javascript');
+        xhttp.send();
+      }
+      loadComponent("demo","<?php echo site_url().'/admin/dashboard';?>");
+        
+      $("#customer-btn").click(function(){
+        loadComponent("demo","<?php echo site_url().'/admin/customer';?>");
+      });
+
+      $("#dashboard-btn").click(function(){
+        loadComponent("demo","<?php echo site_url().'/admin/dashboard';?>");
+      });
+
+      $("#tambah-produk").click(function(){
+        loadComponent("demo","<?php echo site_url().'/admin/tambahproduct';?>");
+      });
+
+      $("#edit-produk").click(function(){
+        loadComponent("demo","<?php echo site_url().'/admin/editproduct';?>");
+      });
+
+      $("#dll-produk").click(function(){
+        loadComponent("demo","<?php echo site_url().'/admin/dllproduct';?>");
+      });
+
+      $("#reseller-btn").click(function(){
+        loadComponent("demo","<?php echo site_url().'/admin/reseller';?>");
+      });
+
+      $("#dropshiper-btn").click(function(){
+        loadComponent("demo","<?php echo site_url().'/admin/dropshiper';?>");
+      });
+
+      $("#halo").click(function(){
+        alert("hello");
+      });
+
+    
+    }); */
+  
